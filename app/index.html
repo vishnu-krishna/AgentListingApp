@@ -1,0 +1,54 @@
+<head>
+	<!--build:css styles/lib.css-->
+	<!--bower:css-->
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+	<!--endbower-->
+	<!--endbuild-->
+	<!--build:css styles/styles.css-->
+	<!--inject:css-->
+	<link rel="stylesheet" href="/.tmp/styles.css">
+	<!--endinject-->
+	<!--endbuild-->
+</head>
+
+<body ng-app=AgentListing>
+	<div ng-controller=HomeController>
+		<!-- Navbar -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+					<a class="navbar-brand" href="#">
+						<h1>Agent Listing</h1>
+					</a>
+				</div>
+				<div class="navbar-collapse collapse hover-effect" id="navbar">
+					<ul>
+						<li ui-sref-active="active"><a ui-sref="Home"><span data-hover="HOME">Home</span></a></li>
+						<li ui-sref-active="active"><a ui-sref="Agents" ><span data-hover="AGENTS">Agents</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="row">
+            <div class="ui-view-container">
+                <div class="spacing" ui-view></div>
+            </div>
+        </div>
+	</div>
+	<!--build:js js/lib.js-->
+	<!--bower:js-->
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/jquery/dist/jquery.js"></script>
+	<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="../bower_components/angular-resource/angular-resource.js"></script>
+	<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="../bower_components/angular-animate/angular-animate.js"></script>
+	<!--endbower-->
+	<!--endbuild-->
+	<!--build:js js/app.js-->
+	<!--inject:js-->
+	<script src="/app/main.js"></script>
+	<!--endinject-->
+	<!--endbuild-->
+</body>

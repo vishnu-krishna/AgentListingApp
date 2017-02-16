@@ -1,0 +1,217 @@
+/*--
+	Author: Vishnu Chander B
+	License:
+--*/
+
+
+/*-- Reset-Code --*/
+
+$navcolor:#EEE;
+$whitecolor:#FFF;
+$bluecolor:#2C3E50;
+$rgba:rgba(255, 255, 255, 0.3);
+body {
+    padding: 0;
+    margin: 0;
+    background: $whitecolor;
+    font-family: 'Lora', serif;
+}
+
+body a {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    text-decoration: none;
+}
+
+body a:hover {
+    text-decoration: none;
+}
+
+body a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+input[type="button"],
+input[type="submit"] {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+    outline: none
+}
+
+
+/*-- //Reset-Code --*/
+
+
+/* Header */
+
+h4 {
+    margin-bottom: 10px;
+}
+
+.navbar-default {
+    background-color:$bluecolor;
+    border: none;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+a.navbar-brand {
+    font-size: 40px;
+    line-height: 28px;
+    padding-top: 7px;
+}
+
+.navbar-default .navbar-brand {
+    color: $navcolor;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: $whitecolor;
+}
+
+.navbar ul {
+    float: right;
+    padding-top: 15px;
+}
+
+.navbar ul li {
+    text-align: center;
+    display: inline-block;
+}
+
+nav a {
+    display: inline-block;
+    margin: 15px 0;
+    outline: none;
+    color: $navcolor;
+    text-decoration: none;
+    font-weight: 400;
+    text-shadow: 0 0 1px $rgba;
+    font-size: 18px;
+}
+
+nav a {
+    &:hover &:focus {
+        outline: none;
+        color: $whitecolor;
+    }
+}
+
+.hover-effect a {
+    overflow: hidden;
+    height: 25px;
+    span {
+        position: relative;
+        display: inline-block;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        width: 145px;
+        &::before {
+            position: absolute;
+            bottom: 100%;
+            content: attr(data-hover);
+            font-weight: 700;
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+.hover-effect a:hover span,
+.hover-effect a:focus span {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    transform: translateY(100%);
+}
+
+.spacing {
+    margin-top: 50px;
+}
+
+.panel-default>.panel-heading {
+    background-color: $bluecolor !important;
+}
+
+.panel-title {
+    color: $whitecolor;
+}
+
+//Custom Animations for UI router 
+[ui-view].ng-enter,
+[ui-view].ng-leave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+[ui-view].ng-enter {
+    opacity: 0;
+    -webkit-transform: scale3d(0.96, 0.96, 0.96);
+    -moz-transform: scale3d(0.96, 0.96, 0.96);
+    transform: scale3d(0.96, 0.96, 0.96);
+}
+
+[ui-view].ng-enter-active {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    -moz-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+[ui-view].ng-leave {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+[ui-view].ng-leave-active {
+    opacity: 0;
+}

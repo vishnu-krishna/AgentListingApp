@@ -1,0 +1,33 @@
+<head>
+	<link rel="stylesheet" href="styles/lib.css">
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body ng-app=AgentListing>
+	<div ng-controller=ContactController>
+		<!-- Navbar -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+					<a class="navbar-brand" href="#">
+						<h1>Agent Listing</h1>
+					</a>
+				</div>
+				<div class="navbar-collapse collapse hover-effect" id="navbar">
+					<ul>
+						<li ui-sref-active="active"><a ui-sref="Home"><span data-hover="HOME">Home</span></a></li>
+						<li ui-sref-active="active"><a ui-sref="Agents" ><span data-hover="AGENTS">Agents</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="row">
+            <div class="ui-view-container">
+                <div class="spacing" ui-view></div>
+            </div>
+        </div>
+	</div>
+	<script src="js/lib.js"></script>
+	<script src="js/app.js"></script>
+</body>

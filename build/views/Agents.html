@@ -1,0 +1,43 @@
+<div class="container">
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h4>Search for an Agent</h4>
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model='details.agent'/>
+            <br/>
+        </div>
+        <div class="alert alert-warning" ng-show="details.agent.length < 3">
+            Enter more than 3 Characters!!!
+        </div>
+        <a class="btn btn-primary" data-ng-click="findAgents()">Search for {{details.agent}}</a>
+    </div>
+</div>
+
+<p>
+    <a href="#/">Back to Home</a>
+</p>
+
+<br/><h4 ng-show="showHeading"> Top 10 Agents with the name {{details.agent}} are</h4>
+
+<div ng-repeat='agent in agents'>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Agent Details</h3>
+                </div>
+                <div class="panel-body">
+                    Agent Name: {{agent.Name}}
+                </div>
+                <div class="panel-body">
+                    Agent Secondary Name : {{agent.SecondaryName}}
+                </div>
+                <div class="panel-body">
+                    Website:{{agent.Url}}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
