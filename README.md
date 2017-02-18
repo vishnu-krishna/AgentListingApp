@@ -9,15 +9,15 @@ Download the package and run the following steps
 7.	Gulp serve-dev – for development code
 8.	Gulp serve-test /gulp test-browser – for unit testing and code coverage report.
 9.  If you dont like to install gulp just type node server.js. it will fire the application in port 3000.
-
-Screenshots of the application
-Home Page
-[Template](https://github.com/vishnucute05/AgentListingApp/blob/master/Screenshots/Homepage.PNG)
-Traverse to Agents Page by clicking the links in the navbar
-[Template](https://github.com/vishnucute05/AgentListingApp/blob/master/Screenshots/AgentsPage.PNG)
-Type in the agent name. Warning in case of less than 3 characters.
-[Template](https://github.com/vishnucute05/AgentListingApp/blob/master/Screenshots/Warning3Characters.PNG)
-Now enter the agent details and hit enter or click Search.
-[Template](https://github.com/vishnucute05/AgentListingApp/blob/master/Screenshots/Top10.PNG)
-Incase the agent is not found, the No results will be published with an error message.
-[Template](https://github.com/vishnucute05/AgentListingApp/blob/master/Screenshots/Error.PNG)
+<br />
+Screenshots of the application<br />
+Home Page<br />
+![Template](https://github.com/vishnucute05/AgentListingApp/blob/master/Screenshots/Homepage.PNG)<br />
+Traverse to Agents Page by clicking the links in the navbar<br />
+![Template](https://github.com/vishnucute05/AgentListingApp/blob/master/Screenshots/AgentsPage.PNG)<br />
+Type in the agent name. Warning in case of less than 3 characters.<br />
+![Template](https://github.com/vishnucute05/AgentListingApp/blob/master/Screenshots/Warning3Characters.PNG)<br />
+Now enter the agent details and hit enter or click Search.<br />
+![Template](https://github.com/vishnucute05/AgentListingApp/blob/master/Screenshots/Top10.PNG)<br />
+Incase the agent is not found, the No results will be published with an error message.<br />
+![Template](https://github.com/vishnucute05/AgentListingApp/blob/master/Screenshots/Error.PNG)<br />
