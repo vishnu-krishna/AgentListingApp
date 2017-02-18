@@ -5,10 +5,17 @@ angular.module("AgentListing", ['ui.router','ngAnimate'])
 .controller("AgentController", ['$http','$scope', function ($http, $scope) {
 	$scope.details={};
 	$scope.showHeading = false;
+	$scope.loading = false;
 	$scope.findAgents = function(){
 		$scope.showHeading = true;
+		$scope.loading = true;
+		$scope.results = false;
 		$http.get("https://api.ratemyagent.com.au/autosearch/agents?SearchTerm=" + $scope.details.agent)
 		.then(function (res) {
+			$scope.loading = false;
+			if(res.data.Results.length == 0){
+				$scope.results = true;
+			}
 			console.log(res);
 			$scope.agents = res.data.Results;
 		});

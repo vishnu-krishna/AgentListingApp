@@ -19,7 +19,8 @@
 </p>
 
 <br/><h4 ng-show="showHeading"> Top 10 Agents with the name {{details.agent}} are</h4>
-
+<br/><h4 ng-show="loading"> Loading .....</h4>
+<br/><h4 ng-show="results" style="color:red"> No Results Found.. Search Again</h4>
 <div ng-repeat='agent in agents'>
     <div class="row">
         <div class="col-md-12">

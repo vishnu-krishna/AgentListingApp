@@ -3,13 +3,14 @@
     <div class="col-md-6 col-md-offset-3">
         <h4>Search for an Agent</h4>
         <div class="form-group">
-            <input type="text" class="form-control" ng-model='details.agent'/>
+            <input type="text" class="form-control" ng-model='details.agent'onkeydown="if (event.keyCode == 13)
+                        document.getElementById('Clicker').click()"/>
             <br/>
         </div>
         <div class="alert alert-warning" ng-show="details.agent.length < 3">
             Enter more than 3 Characters!!!
         </div>
-        <a class="btn btn-primary" data-ng-click="findAgents()">Search for {{details.agent}}</a>
+        <a class="btn btn-primary" id="Clicker" data-ng-click="findAgents()" >Search for {{details.agent}}</a>
     </div>
 </div>
 
@@ -18,7 +19,8 @@
 </p>
 
 <br/><h4 ng-show="showHeading"> Top 10 Agents with the name {{details.agent}} are</h4>
-
+<br/><h4 ng-show="loading"> Loading .....</h4>
+<br/><h4 ng-show="results" style="color:red"> No Results Found.. Search Again</h4>
 <div ng-repeat='agent in agents'>
     <div class="row">
         <div class="col-md-12">
@@ -41,3 +43,4 @@
     </div>
 </div>
 </div>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
