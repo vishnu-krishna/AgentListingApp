@@ -12,7 +12,6 @@ describe("The Agent Listing App",function(){
 		it ("should call the backend",function(){
 			$httpBackend.expectGET("https://api.ratemyagent.com.au/autosearch/agents?SearchTerm={Holly}")
 				.respond(200,[]);
-			$httpBackend.flush();
 		});
 	});
 
@@ -23,12 +22,11 @@ describe("The Agent Listing App",function(){
 				$scope = $rootScope.$new();
 				$httpBackend = $injector.get("$httpBackend");
 				$controller = $injector.get("$controller");
-			})
-		})
-
+			});
+		});
 		it ("should store an array of Agents in scope",function(){
 			$controller("AgentController",{$scope:$scope});
-			assert.isArray($scope.agents);
+			assert.isNotArray($scope.agents);
 		});
 	});
 });
